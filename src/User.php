@@ -2,9 +2,9 @@
 
 final class User
 {
-    protected $lastName;
-    protected $firstName;
-    protected $birthDate;
+    private $lastName;
+    private $firstName;
+    private $birthDate;
 
     public function __construct($lastName, $firstName, $birthDate)
     {
