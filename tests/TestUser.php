@@ -11,4 +11,14 @@ class TestUser extends TestCase
             new User("Nom", "Prénom", new DateTime())
         );
     }
+
+    public function testShouldGetIdentifierAsNormalized(): void
+    {
+        $user = new User("Billot", "Romain", new DateTime("1997-09-30T16:38:01.012345Z"));
+
+        $this->assertEquals(
+            "ROMAINBILLOT30091997",
+            $user->getIdentifier()
+        );
+    }
 }
